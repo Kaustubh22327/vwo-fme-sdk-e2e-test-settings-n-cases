@@ -13,6 +13,7 @@ module.exports = {
   SETTINGS_WITH_EXTRA_KEYS_AT_ROOT_LEVEL: require('./src/settings/SettingsWithExtraKeysAtRootLevel.json'),
   SETTINGS_WITH_EXTRA_KEYS_INSIDE_OBJECTS: require('./src/settings/SettingsWithExtraKeysInsideObjects.json'),
   SETTINGS_WITH_WRONG_TYPE_FOR_VALUES: require('./src/settings/SettingsWithWrongTypeForValues.json'),
+  HOLDOUT_BASE_SETTINGS: require('./src/settings/HoldoutBaseSettings.json'),
 
   GETFLAG_TESTS: require('./src/test-cases/index.json'),
   SEGMENTATION_TESTS: require('./src/segmentation-evaluator/index.json'),

@@ -18,7 +18,7 @@ class SettingsAndTestCases {
       "SETTINGS_WITH_EXTRA_KEYS_INSIDE_OBJECTS" => json_decode(file_get_contents(__DIR__ . "/settings/SettingsWithExtraKeysInsideObjects.json"), false),
       "SETTINGS_WITH_NO_FEATURE_AND_CAMPAIGN" => json_decode(file_get_contents(__DIR__ . "/settings/SettingsWithNoFeatureAndCampign.json"), false),
       "SETTINGS_WITH_WRONG_TYPE_FOR_VALUES" => json_decode(file_get_contents(__DIR__ . "/settings/SettingsWithWrongTypeForValues.json"), false),
-      
+      "HOLDOUT_BASE_SETTINGS" => json_decode(file_get_contents(__DIR__ . "/settings/HoldoutBaseSettings.json"), false),
 
       "GETFLAG_TESTS" => json_decode(file_get_contents(__DIR__ . "/test-cases/index.json"), true),
       "SEGMENTATION_TESTS" => json_decode(file_get_contents(__DIR__ . "/segmentation-evaluator/index.json"), true),

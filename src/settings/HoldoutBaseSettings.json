@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "holdouts": [
+    {
+      "percentTraffic": 20,
+      "isGlobal": false,
+      "segments": {},
+      "featureIds": [1],
+      "metrics": [
+        {
+          "type": "CUSTOM_GOAL",
+          "identifier": "event1",
+          "id": 1
+        }
+      ],
+      "name": "New Holdout",
+      "id": 3
+    }
+  ],
+  "sdkKey": "000000000000_MASKED_000000000000",
+  "campaigns": [
+    {
+      "isAlwaysCheckSegment": false,
+      "isForcedVariationEnabled": false,
+      "status": "RUNNING",
+      "variations": [
+        {
+          "variables": [
+            {
+              "id": 1,
+              "type": "string",
+              "value": "control",
+              "key": "stringVar"
+            }
+          ],
+          "segments": {},
+          "weight": 100,
+          "id": 1,
+          "name": "Rollout-rule-1"
+        }
+      ],
+      "type": "FLAG_ROLLOUT",
+      "segments": {},
+      "name": "featureOne : Rollout",
+      "key": "featureOne_rolloutRule1",
+      "id": 1
+    },
+    {
+      "isAlwaysCheckSegment": false,
+      "isForcedVariationEnabled": true,
+      "status": "RUNNING",
+      "key": "featureOne_testingRule1",
+      "percentTraffic": 100,
+      "type": "FLAG_TESTING",
+      "segments": {},
+      "name": "featureOne : Testing rule 1",
+      "variations": [
+        {
+          "variables": [
+            {
+              "id": 1,
+              "type": "string",
+              "value": "control",
+              "key": "stringVar"
+            }
+          ],
+          "segments": {},
+          "weight": 50,
+          "id": 1,
+          "name": "Default"
+        },
+        {
+          "variables": [
+            {
+              "id": 1,
+              "type": "string",
+              "value": "variation1",
+              "key": "stringVar"
+            }
+          ],
+          "segments": {
+            "or": [
+              {
+                "user": "kaustubh123"
+              }
+            ]
+          },
+          "weight": 50,
+          "id": 2,
+          "name": "Variation-1"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "features": [
+    {
+      "metrics": [
+        {
+          "type": "CUSTOM_GOAL",
+          "identifier": "event1",
+          "id": 1
+        }
+      ],
+      "status": "ON",
+      "key": "featureOne",
+      "type": "FEATURE_FLAG",
+      "impactCampaign": {},
+      "rules": [
+        {
+          "campaignId": 1,
+          "type": "FLAG_ROLLOUT",
+          "ruleKey": "rolloutRule1",
+          "variationId": 1
+        },
+        {
+          "type": "FLAG_TESTING",
+          "campaignId": 2,
+          "ruleKey": "testingRule1"
+        }
+      ],
+      "name": "featureOne",
+      "id": 1
+    }
+  ],
+  "usageStatsAccountId": 123456,
+  "accountId": 123456
+}
